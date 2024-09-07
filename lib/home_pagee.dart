@@ -10,99 +10,48 @@ class HomePagee extends StatefulWidget {
 class _HomePageeState extends State<HomePagee> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-      body: 
-        Column(
-          children: [
-            Stack(
-              children: [
-                Container(
-                  color: Colors.grey,
-                  height: 700,
-                ),
-                Positioned(
-                  child: Container(
-                    height: 300,
-                    width: 400,
-                    color: Colors.white,
-                    child: Image.network(
-                      'https://media.istockphoto.com/id/691524194/photo/family-having-fun-at-home.jpg?s=612x612&w=0&k=20&c=jn3iQ4oKsfl4RgzxGuSF_iX9LehtyfdS9aD5gcq-TXU=',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top: 20,
-                  child: Container(
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.arrow_back),
-                      color: const Color.fromARGB(255, 0, 0, 0),
-                      iconSize: 35,
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top: 265,
-                  left: 10,
-                  child: Container(
-                    height: 80,
-                    width: 80,
-                    child: Image.network(
-                        'https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/man-user-circle-icon.png'),
-                  ),
-                ),
-                Positioned(
-                  top: 350,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Sachin Kumar',
-                          style: TextStyle(
-                            color: const Color.fromARGB(255, 6, 6, 6),
-                            backgroundColor: Color.fromARGB(255, 245, 248, 243),
-                            fontSize: 30,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top: 420,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      height: 50,
-                      width: 200,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 5, 63, 237),
-                        borderRadius: BorderRadius.circular(7.0),
-                      ),
-                      child: Text(
-                        ' + Add tos tory',
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 20,
-                            fontWeight: FontWeight.w900,
-                            height: 1.8),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+    return Stack(
+      children: [
+        Scaffold(
+          body: Container(
+            height: 300,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.green,
+            child: Image.network(
+              'https://images.pexels.com/photos/15481505/pexels-photo-15481505/free-photo-of-cloudy-nyc-my-favorite-photo-of-all-time.jpeg?auto=compress&cs=tinysrgb&w=800',
+              fit: BoxFit.cover,
             ),
-          ],
-        )
-      ,
+          ),
+        ),
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Padding(
+            padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
+            child: Container(
+              child: Text(
+                  'Once the app is installed on your device, run it and log in with your Proton VPN username and password. Proton Mail users already have a Proton VPN account can sign in with existing Proton credentials.'),
+            ),
+          ),
+        ),
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Padding(
+            padding: const EdgeInsets.only(top: 350, left: 20, right: 20),
+            child: Container(
+              child: Text(
+                'Once the app is installed on your device, run it and log in with your Proton VPN username and password. ',
+              ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 210, left: 2.0, right: 20),
+          child: Container(
+            child: Image.network('https://cdn-icons-png.flaticon.com/128/3518/3518775.png'),
+          ),
+        ),
+       
+      ],
     );
   }
 }
